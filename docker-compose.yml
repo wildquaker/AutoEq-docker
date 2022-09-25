@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  autoeq:
+    build:
+      context: .
+      dockerfile: ./docker/debian/Dockerfile
+    ports:
+      - 80:80
+    volumes:
+      - ./AutoEq:/root/AutoEq
+    tty: true
